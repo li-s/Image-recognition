@@ -11,10 +11,9 @@ def predict():
 
     categories = []
     with open('../data/words.txt', 'r') as r:
-        a = r.readline().split()
-        while a:
+        for line in r:
+            a = line.split()
             categories.append(a[1 : ])
-            a = r.readline().split()
     return categories[line]
 if __name__ == '__main__':
     print(predict())
