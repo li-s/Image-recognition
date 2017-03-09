@@ -2,6 +2,10 @@
 
 ## Introduction
 
+Image recognition tasks the machine in recognising and classifying objects displayed in images, outputting the object's label from a fixed set of categories. The machine trains to recognise objects in images with changes of orientation, lighting, scale, etc. In this repository, I tested the model on 13 different image, with an accuracy of 70%, with some examples and the generated label shown below.
+
+Due to my lack of training data, and the similarity between image recognition is not very removed from handwritting recognition, with the only difference being the extra layers required for highly accurate image recognition as compared to the handwritting counterpart, I will be using the pre-trained [VGG 19 model for Keras](https://gist.github.com/baraldilorenzo/8d096f48a1be4a2d660d#file-vgg-19_keras-py) from VGG(visual geometric group), along with the relevant model [weights](http://www.image-net.org/challenges/LSVRC/2014/).
+
 ## Getting started
 
 ### Prerequisites
@@ -15,18 +19,19 @@
 
 ### Usage
 
+Run `predict.py` from models, and type in the desired file to be tested on. Must be located within the folder `data`. The function returns the most likely label of the object in the picture.
+
 ## Testing results
+The
+
+## API reference
++ `models.py`: The KGG 19 model which i will be using.
 
 ## miscellaneous
-
-### something about whos program I use
-
-+ [VGG 19 model for keras](https://gist.github.com/baraldilorenzo/8d096f48a1be4a2d660d#file-vgg-19_keras-py)
-where the weights of the models come from (http://www.image-net.org/challenges/LSVRC/2014/)
 
 ### Readings
 + [Beginner guide to CNN](https://adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)
 + [Neural networks](http://neuralnetworksanddeeplearning.com/chap1.html)
-+ [CNN simplified](http://www.robots.ox.ac.uk/~vgg/practicals/cnn/#part-3-learning-a-tiny-cnn)
 + [Watch this](https://www.youtube.com/watch?v=AgkfIQ4IGaM)
-+
++ [VGG 19 Research paper](https://arxiv.org/pdf/1409.1556.pdf)
++ [Reserach paper simplified](http://www.robots.ox.ac.uk/~vgg/practicals/cnn/)
