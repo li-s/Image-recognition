@@ -22,7 +22,7 @@ Due to my lack of training data, and the similarity between image recognition is
 Run `predict.py` from models, and type in the desired file to be tested on. Must be located within the folder `data`. The function returns the most likely label of the object in the picture.
 
 ## Testing results
-<img src="https://github.com/li-s/Image-recognition/blob/master/data/file0.jpg" height="50">: "purse" (conf. = 7.63%), <img src="https://github.com/li-s/Image-recognition/blob/master/data/file10.jpg" height="50">: "desktop, computer" (conf. = 36.57%), <img src="https://github.com/li-s/Image-recognition/blob/master/data/file6.jpg" height="50">: "envelope" (conf. = 12.39%)
+<img src="https://github.com/li-s/Image-recognition/blob/master/data/file0.jpg" height="50">: "purse" (conf. = 7.63%), <img src="https://github.com/li-s/Image-recognition/blob/master/data/file10.jpg" height="50">: "desktop, computer" (conf. = 36.57%), <img src="https://github.com/li-s/Image-recognition/blob/master/data/file8.jpg" height="50">: "electric, fan, blower" (conf. = 80.03%)
 
 ## API reference
 + `models.py`: The KGG 19 model which i will be using.
