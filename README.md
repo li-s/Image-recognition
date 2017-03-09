@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Image recognition tasks the machine in recognising and classifying objects displayed in images, outputting the object's label and confidence level from a fixed set of categories. The machine trains to recognise objects in images with changes of orientation, lighting, scale, etc. In this repository, I tested the model on 13 different image, with an accuracy of 70%. Some examples are listed below with their level of confidence.
+Image recognition tasks the machine in recognising and classifying objects displayed in images, outputting the object's label and confidence level from a fixed set of categories. The machine trains to recognise objects in images with changes of orientation, lighting, scale, etc. In this repository, I tested the model on 20 different image. Some examples are listed below with their level of confidence.
 
 Due to my lack of training data, and the similarity between image recognition is not very removed from handwritting recognition, with the only difference being the extra layers required for highly accurate image recognition as compared to the handwritting counterpart, I will be using the pre-trained [VGG 19 model for Keras](https://gist.github.com/baraldilorenzo/8d096f48a1be4a2d660d#file-vgg-19_keras-py) from VGG(visual geometric group), along with the relevant model [weights](http://www.image-net.org/challenges/LSVRC/2014/).
 
