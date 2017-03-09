@@ -1,7 +1,9 @@
+from decimal import Decimal, ROUND_HALF_UP
+
 from model import load_model
 
 def predict():
-    file = input('Name of image to be classfied(file[0 - 12]), or own file:\n')
+    file = input('Name of image to be classfied(file[0 - 19]), or own file:\n')
     try:
         a = int(file)
         file = 'file' + str(a)
@@ -17,4 +19,6 @@ def predict():
     return categories[int(label)], confidence
 if __name__ == '__main__':
     label, confidence = predict()
-    print('Label: {}\nConfidence: {}'.format(label, confidence))
+    confidence= Decimal(confidence*100)
+    confidence = Decimal(confidence.quantize(Decimal('.01'), rounding=ROUND_HALF_UP))
+    print('Label: {}\nConfidence: {}%'.format(label, confidence))
