@@ -5,15 +5,16 @@ def predict():
     try:
         a = int(file)
         file = 'file' + str(a)
-        answer = int(load_model(file))
+        label, confidence = load_model(file)
     except:
-        answer = int(load_model(file))
+        label, confidence = load_model(file)
 
     categories = []
     with open('../data/words.txt', 'r') as r:
         for line in r:
             a = line.split()
             categories.append(a[1 : ])
-    return categories[answer]
+    return categories[int(label)], confidence
 if __name__ == '__main__':
-    print(predict())
+    label, confidence = predict()
+    print('Label: {}\nConfidence: {}'.format(label, confidence))

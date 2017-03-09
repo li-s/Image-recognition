@@ -77,7 +77,7 @@ def load_model(file):
     sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
     model.compile(optimizer=sgd, loss='categorical_crossentropy')
     out = model.predict(im)
-    return np.argmax(out)
+    return np.argmax(out), out[0][np.argmax(out)]
 
 if __name__ == "__main__":
     # im = cv2.resize(cv2.imread('../data/cat.jpg'), (224, 224)).astype(np.float32)
